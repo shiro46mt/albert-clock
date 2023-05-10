@@ -1,0 +1,68 @@
+/*
+For DSEG font family.
+CSS Level 3 Optimized.
+2017-03-15 by Keshikan
+*/
+@font-face {
+  font-family: "D7MBI";
+  src: url("./fonts/DSEG7Modern-BoldItalic.woff") format('woff');
+}
+
+@font-face {
+  font-family: "D14MBI";
+  src: url("./fonts/DSEG14Modern-BoldItalic.woff") format('woff');
+}
+
+:root[data-theme-mode='white'] {
+  --app-text: #eee;
+}
+:root[data-theme-mode='red'] {
+  --app-text: #e00;
+}
+:root[data-theme-mode='green'] {
+  --app-text: #0e0;
+}
+
+/*** calc-area ***/
+.calc-wrapper {
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+}
+
+.calc-area {
+  margin: 0 auto 30px;
+  width: 100%;
+  color: var(--app-text);
+  font-size: min(18vw, 36vh);
+  border: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  text-align: center;
+  user-select: none;
+}
+
+.calc-area.background {
+  opacity: 0.1;
+}
+
+.calc-area .num {
+  padding: 0 0;
+  font-size: 1em;
+  font-family: "D7MBI";
+}
+
+.calc-area .op {
+  padding: 0.125em 0;
+  font-size: 0.8em;
+  font-family: "D14MBI";
+}
+
+.calc-area .unit {
+  padding-top: 3em;
+  font-size: 0.25em;
+  font-family: "Lora", "Times New Roman", serif;
+}
+

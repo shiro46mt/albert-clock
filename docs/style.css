@@ -1,0 +1,181 @@
+:root {
+  --main-text: #eee;
+  --sub-text: #999;
+  --main-bg: #111;
+}
+
+body {
+  font-family: "Zen Maru Gothic", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+  color: var(--main-text);
+  background-color: var(--main-bg);
+  transition: color 200ms, background-color 200ms;
+  margin: 0;
+  padding: 10px;
+
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom:0px;
+}
+
+.main-content {
+  margin: 10px auto;
+}
+
+.sub-content {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*** overlay ***/
+.overlay {
+  position: fixed;
+  top: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+  right: 0rem;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.75);
+  align-items: center;
+  transition: opacity .5s;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay-window {
+  margin: 0 auto;
+  max-width: 300px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--main-bg);
+  text-align: center;
+  position: relative;
+}
+
+.overlay-window h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.overlay-window h3 {
+  font-size: 1.1em;
+  margin: 0;
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px;
+  color: var(--sub-text);
+  cursor: pointer;
+}
+
+/*** button-array ***/
+.button-array {
+  margin: 5px 34px;
+  height: 40px;
+}
+.button-array input {
+	display: none;
+}
+.button-array label {
+	display: block;
+	float: left;
+	cursor: pointer;
+	width: 60px;
+	margin: 0;
+	padding: 5px;
+	border-right: 1px solid #eee;
+	background: #999;
+	color: #666;
+	text-align: center;
+	transition: .2s;
+}
+.button-array label:first-of-type {
+	border-radius: 3px 0 0 3px;
+}
+.button-array label:last-of-type {
+	border-right: 0px;
+	border-radius: 0 3px 3px 0;
+}
+.button-array input[type="radio"]:checked + label {
+	background-color: #333;
+	color: var(--main-text);
+  font-weight: bold;
+}
+.button-array.color input[type="radio"]:checked + label {
+	color: var(--app-text);
+}
+
+/*** overlay - info ***/
+.overlay-window.overlay-window-info {
+  height: 360px;
+}
+
+.author {
+  font-size: 0.8em;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.author a {
+  text-decoration: none;
+  color: var(--main-text);
+}
+
+/*** sns share ***/
+.sns-share {
+  text-align: center;
+  margin: 10px 0;
+}
+.sns-share a {
+  display: inline-block;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.fa-brands, .fa-solid {
+  font-size: 24px;
+  padding: 0;
+}
+.fa-square-twitter {
+  color: #1b95e0;
+}
+.fa-square-facebook {
+  color: #3b5998;
+}
+.fa-line {
+  color: #06C755;
+}
+.fa-square {
+  color: #ffffff;
+}
+
+/*** footer ***/
+#footer, #footer-menu {
+  font-size: 12px;
+  text-align: center;
+  margin: 10px;
+  color: var(--sub-text);
+}
+
+#footer a {
+  text-decoration: none;
+  color: var(--sub-text);
+  cursor: pointer;
+}

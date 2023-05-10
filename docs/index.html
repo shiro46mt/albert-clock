@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Albert Clock</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <script src="https://kit.fontawesome.com/1d05181571.js" crossorigin="anonymous"></script>
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7849150854652075" crossorigin="anonymous"></script> -->
+
+  <!-- favicon -->
+  <!-- <link rel="icon" href="img/favicon.ico" sizes="any"> -->
+  <!-- <link rel="icon" href="img/icon.svg" type="image/svg+xml"> -->
+  <!-- <link rel="apple-touch-icon" href="img/apple-touch-icon.png"> -->
+  <link rel="manifest" href="img/manifest.webmanifest">
+</head>
+<body>
+  <div class="main-content">
+
+    <div class="overlay" id="overlay-info">
+      <div class="overlay-window overlay-window-info">
+        <h2>Albert Clock</h2>
+
+        <h3>更新間隔</h3>
+        <div class="button-array">
+          <input type="radio" name="interval" id="int05" value="5">
+          <label for="int05">5s</label>
+          <input type="radio" name="interval" id="int10" value="10" checked>
+          <label for="int10">10s</label>
+          <input type="radio" name="interval" id="int15" value="15">
+          <label for="int15">15s</label>
+        </div>
+
+        <h3>文字色</h3>
+        <div class="button-array color">
+          <input type="radio" name="color" id="white" value="white" checked>
+          <label for="white">white</label>
+          <input type="radio" name="color" id="red" value="red">
+          <label for="red">red</label>
+          <input type="radio" name="color" id="green" value="green">
+          <label for="green">green</label>
+        </div>
+
+        <div class="sns-share">
+          <span>
+            <a class="fa-stack" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fshiro46mt.github.io%2Fa-puzzle-a-day%2F%0a&hashtags=apuzzleaday" target="_blank" id="link-twitter">
+              <i class="fa-solid fa-square fa-stack-1x"></i>
+              <i class="fa-brands fa-square-twitter fa-stack-1x"></i>
+            </a>
+          </span>
+          <span>
+            <a class="fa-stack" href="http://www.facebook.com/share.php?u=https://shiro46mt.github.io/a-puzzle-a-day/" target="_blank">
+              <i class="fa-solid fa-square fa-stack-1x"></i>
+              <i class="fa-brands fa-square-facebook fa-stack-1x"></i>
+            </a>
+          </span>
+          <span>
+            <a class="fa-stack" href="https://social-plugins.line.me/lineit/share?url=https://shiro46mt.github.io/a-puzzle-a-day/" target="_blank">
+              <i class="fa-solid fa-square fa-stack-1x"></i>
+              <i class="fa-brands fa-line fa-stack-1x"></i>
+            </a>
+          </span>
+        </div>
+
+        <div class="author">作成: <a href="https://twitter.com/shiro46mt" target="_blank">@shiro46mt</a></div>
+        <div class="author">原案: <a href="https://www.albertclock.com" target="_blank">Albert Clock</a></div>
+        <div class="close-icon"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+    </div>
+
+    <div class="calc-wrapper">
+      <div class="calc-area background">
+        <div class="num">8</div>
+        <div class="op">*</div>
+        <div class="num">8</div>
+        <div class="op">*</div>
+        <div class="num">8</div>
+        <div class="unit"></div>
+      </div>
+      <div class="calc-area background">
+        <div class="num">8</div>
+        <div class="op">*</div>
+        <div class="num">8</div>
+        <div class="op">*</div>
+        <div class="num">8</div>
+        <div class="unit"></div>
+      </div>
+    </div>
+
+    <div class="calc-wrapper">
+      <div class="calc-area">
+        <div class="num" id="h0"></div>
+        <div class="op" id="h1"></div>
+        <div class="num" id="h2"></div>
+        <div class="op" id="h3"></div>
+        <div class="num" id="h4"></div>
+        <div class="unit">hour</div>
+      </div>
+      <div class="calc-area">
+        <div class="num" id="m0"></div>
+        <div class="op" id="m1"></div>
+        <div class="num" id="m2"></div>
+        <div class="op" id="m3"></div>
+        <div class="num" id="m4"></div>
+        <div class="unit">min</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-content">
+    <div id="footer"><a onclick="openInfo();">Menu</a> &copy;2023 SHIRO</div>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
