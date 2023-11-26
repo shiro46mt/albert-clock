@@ -31,7 +31,7 @@ function generatePermutations() {
     for (var j=0; j<ops.length; j++) {
       const eq = nums[i][0] + ops[j][0] + nums[i][1] + ops[j][1] + nums[i][2];
       const ans = parseFloat(eval(eq));
-      if (ans >= 0 && ans < 60 && ans % 1 == 0) arr[ans].push(eq);
+      if (ans >= 0 && ans < 60 && ans % 1 == 0) arr[ans].push(eq.replace("*", "x"));
     }
   }
   return arr;
